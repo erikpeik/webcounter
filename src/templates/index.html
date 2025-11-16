@@ -1,21 +1,24 @@
 <!DOCTYPE html>
-<html lang="en"></html>
-<head>
-  <meta charset="UTF-8">
-  <title>Laskuri</title>
-</head>
-<body>
-  <h2>Ohtulaskuri</h2>
-  <div>nappia painettu {{ value }} kertaa</div>
-  <form action="/increment" method="POST">
-    <button type="submit">
-      Paina
-    </button>
-  </form>
-  <form action="/reset" method="POST">
-    <button type="submit">
-      Nollaa
-    </button>
-  </form>
-</body>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Laskuri</title>
+  </head>
+  <body>
+    <h2>Ohtulaskuri</h2>
+    <div>nappia painettu {{ value }} kertaa</div>
+    <form action="/increment" method="POST">
+      <button type="submit">Paina</button>
+    </form>
+    <form action="/reset" method="POST">
+      <button type="submit">Nollaa</button>
+    </form>
+    <form action="/set" method="POST">
+      <label for="new_value">Aseta arvo:</label>
+      <div>
+        <input type="number" name="new_value" min="0" required />
+        <button type="submit">aseta</button>
+      </div>
+    </form>
+  </body>
 </html>
